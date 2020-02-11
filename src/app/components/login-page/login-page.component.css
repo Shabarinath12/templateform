@@ -1,0 +1,40 @@
+mat-card {
+  width: 400px;
+  height: auto;
+  margin-top: 20px;
+  border: 1px solid gray;
+ }
+img {
+  height: 100px;
+}
+mat-form-field{
+    width:300px;
+}
+ 
+button {
+  width: 150px;
+  height: 35px;
+  margin: 20px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  outline: none;
+  background-color: skyblue;
+  color:black;
+}
+.orange button {
+  width: 150px;
+  height: 35px;
+  margin: -2px;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+}
+.blue button {
+  width: 150px;
+  height: 35px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+}

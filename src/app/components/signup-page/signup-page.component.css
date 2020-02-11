@@ -1,0 +1,22 @@
+mat-card {
+    width: 400px;
+    height: auto;
+    margin-top: 20px;
+    border: 1px solid gray;
+  }
+  img {
+    height: 100px;
+  }
+  mat-form-field{
+      width:300px;
+  }
+  button {
+    width: 250px;
+    height: 35px;
+    margin: 20px;
+    background-color: lightgrey;
+    border-radius: 5px;
+    outline: none;
+    background-color: skyblue;
+    color:black;
+    }

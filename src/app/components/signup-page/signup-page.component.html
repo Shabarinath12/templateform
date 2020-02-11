@@ -1,0 +1,42 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <img src="../../../assets/download.png" />
+      <br />
+      <h3>CREATE AN ACCOUNT</h3>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Name</mat-label>
+        <input matInput placeholder="Name" />
+        <mat-icon matSuffix>message</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Email</mat-label>
+        <input matInput placeholder="Email" />
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Password</mat-label>
+        <input type="password" matInput placeholder="Password" />
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Password</mat-label>
+        <input type="password" matInput placeholder="Password(confirm)" />
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+    </div>
+    <div>
+      <div fxLayout="row" fxLayoutAlign="space-evenly center">
+        <b> <input type="checkbox" />I read and accept</b>
+        <a href="#">terms and conditions</a>
+      </div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign=" center">
+      <div>
+        <button>CREATE AN ACCOUNT</button>
+      </div>
+      <h4>Already have an account?</h4>
+      <a href="/">Login</a>
+    </div>
+  </mat-card>
+</div>

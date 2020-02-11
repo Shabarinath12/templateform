@@ -1,0 +1,41 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <img src="../../../assets/download.png" />
+      <br />
+      <h3>LOG IN TO YOUR ACCOUNT</h3>
+       <mat-form-field appearance="outline">
+        <mat-label>Enter Email</mat-label>
+        <input matInput placeholder="Email" />
+        <mat-icon matSuffix>email</mat-icon>
+       </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Password</mat-label>
+        <input type="password" matInput placeholder="Password" />
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+    </div>
+     <div>
+      <div fxLayout="row" fxLayoutAlign="space-evenly center">
+        <b> <input type="checkbox" />Remember Me</b>
+        <a href="#">Forgot Password?</a>
+      </div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign=" center">
+      <div>
+        <button>LOGIN</button>
+      </div>
+      <!-- <hr /> -->
+      OR
+      <hr />
+      <div class="orange">
+        <button>Log in with Google</button>
+      </div>
+      <div class="blue">
+        <button>Log in with Facebook</button>
+      </div>
+      <h3>Dont have an account?</h3>
+      <a routerLink='signup-page'>Create an account</a>
+    </div>
+  </mat-card>
+</div>
