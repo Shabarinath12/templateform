@@ -1,6 +1,5 @@
-// export class Contact {
-//     name:string;
-//     email:string;
-//     password:string;
+export class Contact {
+    email:string;
+    password:string;
     
-// }
+}

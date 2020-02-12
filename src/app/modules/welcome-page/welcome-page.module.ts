@@ -7,7 +7,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { SharedModule } from "src/app/shared/shared.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { SignupPageComponent } from 'src/app/components/signup-page/signup-page.component';
-
+ 
 const routes: Routes = 
 [{ path: "", component: WelcomePageComponent},
  { path:"signup-page",component:SignupPageComponent}];
@@ -19,7 +19,8 @@ const routes: Routes =
     FlexLayoutModule,
     RouterModule.forChild(routes),
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+     
   ]
 })
 export class WelcomePageModule {}

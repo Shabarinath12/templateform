@@ -1,3 +1,8 @@
+.background{
+  background-image: url( https://i.redd.it/joh0fxz10d431.jpg);
+  background-size:cover;
+}
+
 mat-card {
     width: 400px;
     height: auto;
