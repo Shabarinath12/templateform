@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { Contact } from "../../entities/contact";
-import { NgForm, FormControl, Validators } from "@angular/forms";
 
 @Component({
   selector: "app-login-page",
@@ -9,11 +8,11 @@ import { NgForm, FormControl, Validators } from "@angular/forms";
 })
 export class LoginPageComponent {
   contact: Contact;
-
+  hide: boolean =true;
   constructor() {
-    this.contact= new Contact()
-
+    this.contact = new Contact();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+   }
 }

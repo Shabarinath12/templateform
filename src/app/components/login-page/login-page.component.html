@@ -1,63 +1,81 @@
 <section class="background">
-<div fxLayout="row" fxLayoutAlign="center center">
-  <mat-card>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <mat-card>
       <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-    
-      <div fxLayout="column" fxLayoutAlign="center center">
-        <img src="../../../assets/download.png" />
-        <br />
-        <h3>LOG IN TO YOUR ACCOUNT</h3>
-        <mat-form-field appearance="outline">
-          <mat-label>Enter Email</mat-label>
-          <input matInput placeholder="Email"
-          type="text"
-          [(ngModel)]="contact.email"
-           name="email"
-           required
-          #contactEmail="ngModel"/>
-          <mat-icon matSuffix>email</mat-icon>
-        </mat-form-field>
-        <div *ngIf="!contactEmail.valid && contactEmail.touched">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <img src="../../../assets/download.png" />
+          <br />
+          <h3>LOG IN TO YOUR ACCOUNT</h3>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter Email</mat-label>
+            <input
+              matInput
+              placeholder="Email"
+              type="text"
+              [(ngModel)]="contact.email"
+              name="email"
+              required
+              #contactEmail="ngModel"
+            />
+            <mat-icon matSuffix>email</mat-icon>
+          </mat-form-field>
+          <div *ngIf="!contactEmail.valid && contactEmail.touched">
             Email is required!
           </div>
-        <mat-form-field appearance="outline">
-          <mat-label>Enter Password</mat-label>
-          <input type="password" matInput placeholder="Password" 
-          type="text"
-          [(ngModel)]="contact.password"
-           name="password"
-           required
-          #contactPassword="ngModel"/>
-          <mat-icon matSuffix>lock</mat-icon>
-        </mat-form-field>
-        <div *ngIf="!contactPassword.valid && contactPassword.touched">
+          <mat-form-field appearance="outline">
+            <mat-label>Enter Password</mat-label>
+            <input
+              matInput
+              placeholder="Password"
+              type="hide ? ' password' :'text'"
+              [(ngModel)]="contact.password"
+              name="password"
+              required
+              #contactPassword="ngModel"
+            />
+            <mat-icon
+              matSuffix
+              (click)="hide = !hide"
+              style="cursor: pointer;"
+              >{{ hide ? "lock" : "lock_open" }}</mat-icon
+            >
+          </mat-form-field>
+          <div *ngIf="!contactPassword.valid && contactPassword.touched">
             Password is required!
           </div>
-      </div>
-      <br>
-      <div>
-        <div fxLayout="row" fxLayoutAlign="space-evenly center">
-          <b> <input type="checkbox" />Remember Me</b>
-          <a routerLink="forgot-password">Forgot Password?</a>
         </div>
-      </div>
-      <div fxLayout="column" fxLayoutAlign=" center">
+        <br />
         <div>
-          <button  (click)="contactForm()" [disabled]="!contactForm.valid"routerLink="dashboard"  mat-button type="submit">LOGIN</button>
+          <div fxLayout="row" fxLayoutAlign="space-evenly center">
+            <b> <input type="checkbox" />Remember Me</b>
+            <a routerLink="forgot-password">Forgot Password?</a>
+          </div>
         </div>
-        <!-- <hr /> -->
-        OR
-        <hr />
-        <div class="orange">
-          <button>Log in with Google</button>
+        <div fxLayout="column" fxLayoutAlign=" center">
+          <div>
+            <button
+              (click)="contactForm()"
+              [disabled]="!contactForm.valid"
+              routerLink="dashboard"
+              mat-button
+              type="submit"
+            >
+              LOGIN
+            </button>
+          </div>
+          <!-- <hr /> -->
+          OR
+          <hr />
+          <div class="orange">
+            <button>Log in with Google</button>
+          </div>
+          <div class="blue">
+            <button>Log in with Facebook</button>
+          </div>
+          <h3>Dont have an account?</h3>
+          <a routerLink="signup-page">Create an account</a>
         </div>
-        <div class="blue">
-          <button>Log in with Facebook</button>
-        </div>
-        <h3>Dont have an account?</h3>
-        <a routerLink="signup-page">Create an account</a>
-      </div>
-    </form>
-  </mat-card>
-</div>
+      </form>
+    </mat-card>
+  </div>
 </section>
