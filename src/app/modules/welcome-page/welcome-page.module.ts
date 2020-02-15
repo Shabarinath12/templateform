@@ -7,13 +7,21 @@ import { Routes, RouterModule } from "@angular/router";
 import { SharedModule } from "src/app/shared/shared.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { SignupPageComponent } from 'src/app/components/signup-page/signup-page.component';
+import { DashboardComponent } from 'src/app/components/dashboard/dashboard.component';
+import { ForgotPasswordComponent } from 'src/app/components/forgot-password/forgot-password.component';
  
 const routes: Routes = 
 [{ path: "", component: WelcomePageComponent},
- { path:"signup-page",component:SignupPageComponent}];
+ { path:"signup-page",component:SignupPageComponent},
+ { path:"dashboard",component:DashboardComponent},
+{ path:"",component:LoginPageComponent},
+{ path:"forgot-password",component:ForgotPasswordComponent}];
+
 
 @NgModule({
-  declarations: [WelcomePageComponent, LoginPageComponent,SignupPageComponent],
+  declarations: [WelcomePageComponent, LoginPageComponent,SignupPageComponent,DashboardComponent,ForgotPasswordComponent,
+
+  ],
   imports: [
     CommonModule,
     FlexLayoutModule,

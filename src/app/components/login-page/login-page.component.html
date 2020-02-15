@@ -1,7 +1,6 @@
 <section class="background">
 <div fxLayout="row" fxLayoutAlign="center center">
   <mat-card>
-
       <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
     
       <div fxLayout="column" fxLayoutAlign="center center">
@@ -35,15 +34,16 @@
             Password is required!
           </div>
       </div>
+      <br>
       <div>
         <div fxLayout="row" fxLayoutAlign="space-evenly center">
           <b> <input type="checkbox" />Remember Me</b>
-          <a href="#">Forgot Password?</a>
+          <a routerLink="forgot-password">Forgot Password?</a>
         </div>
       </div>
       <div fxLayout="column" fxLayoutAlign=" center">
         <div>
-          <button mat-button type="submit">LOGIN</button>
+          <button  (click)="contactForm()" [disabled]="!contactForm.valid"routerLink="dashboard"  mat-button type="submit">LOGIN</button>
         </div>
         <!-- <hr /> -->
         OR
